@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Bài tập] Sinh bảng cửu chương</title>
+</head>
+<body>
+    <script>
+        let sout;
+        sout = '<table border="1" width="600">';
+        for (i = 2; i < 10; i++){
+            sout += '<tr>';
+            for (j = 2; j < 10; j++){
+                sout += '<td>' + i + 'x' + j + '=' + i*j + '</td>';
+            }
+            sout += '</tr>';
+        }
+        sout += '</table>';
+        document.write(sout);
+    </script>
+</body>
+</html>
