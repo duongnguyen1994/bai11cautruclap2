@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 7</title>
+</head>
+<body>
+    <script>
+        for(i=1;i<=100;i++){
+            if(chiahet15(i)){
+                console.log('FizzBuzz');
+                i++;
+            }
+            if(chiahet5(i)){
+                console.log('Buzz');
+                i++;
+            }if(chiahet3(i)){
+                console.log('Fizz');
+                i++;
+            }
+            console.log(i)
+        }
+
+        // chia het 3
+        function chiahet3(N){
+            if(N%3==0 && N%5!==0){
+                return true
+            }
+        }
+
+        // chia het 5
+        function chiahet5(N){
+            if(N%5==0 && N%3!==0){
+                return true
+            }
+        }
+        // chia het 15
+        function chiahet15(N){
+            if(N%15==0){
+                return true
+            }
+        }
+    </script>
+</body>
+</html>

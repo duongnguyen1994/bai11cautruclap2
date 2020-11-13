@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 8</title>
+</head>
+<body>
+    <button onclick="play()">Play</button>
+    <script>
+        function play(){
+            let min = Number(prompt('Nhập số nhỏ nhất'));
+            let max = Number(prompt('Nhập số lớn nhất'));
+            let num = Number(prompt('Nhập số chọn'));
+            let numRd = getRndInteger(min, max);
+            console.log(numRd)
+            if (Number.isInteger(min) && Number.isInteger(max) && num >= min && num <= max){
+                result(num, numRd);
+                alert('Bấm nút Play để chơi lại')
+            } else alert('Vui lòng nhập lại');               
+        }
+        // Kết quả
+        function result(num, numRd){
+            for(i=2;i>=0;i--){
+                if (sosanh(num, numRd)){
+                    alert('Chúc mừng bạn');
+                    break;
+                }
+                if (i>0){
+                    if(num>numRd){
+                        num = Number(prompt('Số bạn chọn đang lớn hơn, bạn còn ' + i + ' lần chọn lại'));
+                    } else {
+                        num = Number(prompt('Số bạn chọn đang nhỏ hơn, bạn còn ' + i + ' lần chọn lại'));
+                    }
+                }
+            } while(i>=0);     
+        }
+            
+        // so sánh số nhập vào và số máy chọn
+        function sosanh(num, numRd){
+            if(num==numRd){
+                return true;
+            }
+        }
+        // random trong khoảng min max
+        function getRndInteger(min, max) {
+            return Math.floor(Math.random() * (max - min + 1) ) + min;
+        } 
+    </script>
+</body>
+</html>

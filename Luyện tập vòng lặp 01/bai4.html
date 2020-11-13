@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 4</title>
+</head>
+<body>
+    <script>
+        let a = 0;
+        let b = 1;
+        for (i=1;;i++){
+            a+=b;
+            b+=a;
+            if (a%5==0){
+            console.log(a);
+            break;
+            }
+            if (b%5==0){
+            console.log(b);
+            break;
+            }
+        }
+    </script>
+</body>
+</html>
