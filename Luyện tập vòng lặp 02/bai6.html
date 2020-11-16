@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*          ****    ****
+                   ******  ******
+                   **************
+                    ************
+                     **********
+                      ********
+                       ******
+                        ****
+                         **/
+        // draw bottom of heart
+        function heartBot() {
+            for (let i = 1; i <= 7; i++) {
+                let string1 = '';
+                let string2 = '';
+                for (let j = 7; j >= i; j--) {
+                    string1 += '&hearts;'
+                }
+                for (let x = 1; x <= i; x++) {
+                    string2 = string2 + '\xa0\xa0'
+                }
+                document.write(string2 + string1 + string1 + '<br>')
+            }
+        }
+        // draw top of heart
+        function heartTop() {
+            for (let i = 1; i <= 3; i++) {
+                let string1 = '';
+                let string2 = '';
+                for (let j = 1; j <= i; j++) {
+                    string1 += '&hearts;';
+                }
+                for (let x = 3; x >= i; x--) {
+                    string2 += '\xa0\xa0';
+                }
+                if(i>=2){
+                    let string = string2 + string1 + string1
+                    document.write(string + string2 + string + '<br>');
+                }
+            }
+        }
+        console.log(heartTop());
+        console.log(heartBot());
+    </script>
+</body>
+
+</html>
